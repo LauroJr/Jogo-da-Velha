@@ -1,4 +1,8 @@
 import os
+import modulo_jogo_da_velha
+
+
+modulo_jogo_da_velha.loading()
 
 print(12*'-=')
 print("CADASTRE OS JOGADORES: ")
@@ -179,7 +183,8 @@ while cont < 9 and bol is True:
         bol = False
         venc = True
     else:
-        cont += 1
+        if jogo != 50:
+            cont += 1
       # if cont == 8:
       #    bol = False    para usar esta condição, troque o conectivo and por or
 
