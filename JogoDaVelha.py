@@ -1,14 +1,28 @@
 import os
 
+print(12*'-=')
 print("CADASTRE OS JOGADORES: ")
-jogador1 = str(input("Nome: "))
-jogador2 = str(input("Nome: "))
-player1 = str(input(f"{jogador1}, Escolha entre [O] ou [X] p/ jogar: "))
+print(12*'-=')
+
+jogador1 = str(input("Player 1: "))
+jogador2 = str(input("Player 2: "))
+print()
+player1 = str(input(f"{jogador1}, escolha entre [O] ou [X] p/ jogar: "))
+print()
 if player1 == 'O':
     player2 = 'X'
+    print(f'{jogador1}, você joga: {player1}\n{jogador2}, você joga:\
+ {player2}')
+    print()
+    iniciar = input("Tecle enter para iniciar o jogo")
 else:
     player2 = 'O'
+    print(f'{jogador1}, você joga: {player1}\n{jogador2}, você joga:\
+ {player2}')
+    print()
+    iniciar = input("Tecle enter para iniciar o jogo: ")
 
+os.system("cls")
 rodada = 3
 
 lista = [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -29,14 +43,15 @@ while cont < 9 and bol is True:
     else:
         play = player2
         vencedor = jogador2
+    print(15*'-=')
+    print("ESCOLHA UM NÚMERO P/ JOGAR: ")
+    print(15*'-=')
     for l in range(0, 3):
         for c in range(0, 3):
             print(f'[ {matriz[l][c]} ]', end=' ')
         print()
-
-    print("==================================================")
-    jogo = int(input("Escolha um número p/ jogar: "))
-    print("==================================================")
+    print()
+    jogo = int(input())
 
     if jogo == 1:
         if lista[0] == 1:
