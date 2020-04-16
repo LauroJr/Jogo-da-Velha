@@ -185,8 +185,6 @@ while cont < 9 and bol is True:
     else:
         if jogo != 50:
             cont += 1
-      # if cont == 8:
-      #    bol = False    para usar esta condição, troque o conectivo and por or
 
 if venc is False:
     print("Rodada sem vencedor...")
